@@ -36,10 +36,12 @@ while true; do
             echo "Running point_1.sh..."
             run_script "point_1.sh"
             ;;
+
         2)
             echo "Running point_2.sh..."
             run_script "point_2.sh"
             ;;
+
         3)
             # Prompt the user to input the required parameters
             read -p "Enter the word to search for: " word
@@ -49,14 +51,21 @@ while true; do
             echo "Running point_3.sh with parameters '$word' and '$path'..."
             run_script "point_3.sh" "$word" "$path"
             ;;
+
+        4)
+            run_script "point_4.sh"
+            ;;
+
         u)
             echo "Running users.sh..."
             run_script "users.sh"
             ;;
+
         0)
             echo "Exiting the program."
             break
             ;;
+            
         *)
             clear
             echo "Invalid option. Please try again."
