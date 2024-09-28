@@ -10,7 +10,7 @@ install_dialog() {
 
         # Use pkgin to install dialog on NetBSD
         if [ -x "$(command -v pkgin)" ]; then
-            sudo pkgin -y install dialog
+            pkgin -y install dialog
         else
             echo "pkgin is not available. Please install dialog manually."
             exit 1
