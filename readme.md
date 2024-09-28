@@ -38,7 +38,7 @@ This repository contains a series of shell scripts for automating common tasks o
 
 
  
-**[6. point_6.sh](./point_6.sh): (Menu Script):**
+**[6. menu.sh](./menu.sh): (Menu Script):**
 This shell script provides a menu that allows the user to execute other scripts (`point_1.sh`, `point_2.sh`, `point_3.sh`) and includes an option to exit the program.
 
 #### Features:
