@@ -3,14 +3,14 @@
 
 # Function to display the menu options
 show_menu() {
-    echo "----------------------------"
-    echo " Menu - Choose an option:"
-    echo "----------------------------"
-    echo "1. Execute Script 1 (point_1.sh)"
-    echo "2. Execute Script 2 (point_2.sh)"
-    echo "3. Execute Script 3 (point_3.sh) - Requires 2 parameters"
-    echo "4. Exit"
-    echo "----------------------------"
+    echo "--------------------------------------------------"
+    echo "      Shell Scripts Menu - Choose an option:"
+    echo "--------------------------------------------------"
+    echo " 1. Hello World                       (point_1.sh)"
+    echo " 2. Number of lines in /etc/profile   (point_2.sh)"
+    echo " 3. Search word in a file             (point_3.sh)"
+    echo " 4. Exit"
+    echo "--------------------------------------------------"
 }
 
 # Function to give execution permission if needed and run the script
