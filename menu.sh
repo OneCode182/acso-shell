@@ -9,6 +9,7 @@ show_menu() {
     echo " 1. Hello World                       (point_1.sh)"
     echo " 2. Number of lines in /etc/profile   (point_2.sh)"
     echo " 3. Search word in a file             (point_3.sh)"
+    echo " 4. Search Users and info             (point_4.sh)"
     echo " u. Create users                      (users.sh)"
     echo " 0. Exit"
     echo "--------------------------------------------------"
@@ -65,7 +66,7 @@ while true; do
             echo "Exiting the program."
             break
             ;;
-            
+
         *)
             clear
             echo "Invalid option. Please try again."
