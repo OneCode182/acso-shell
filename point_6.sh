@@ -53,7 +53,8 @@ while true; do
             break
             ;;
         *)
-            echo "Invalid option. Please try again."
-            ;;
+            clear
+	    echo "Invalid option. Please try again."
+	    ;;
     esac
 done

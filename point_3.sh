@@ -20,3 +20,4 @@ else
     echo "Se encontro la palabra '$word' en el archivo."
     echo "RESULTADOS:"
     echo "$result" 
+fi
