@@ -4,12 +4,18 @@
 clear
 
 # Title
-echo "Running script for view users and descriptions (point_4.sh)..."
+echo "Running script for viewing users and descriptions (point_4.sh)..."
+sleep 2
 
-# Extraer nombres de usuarios y descripciones desde el archivo /etc/passwd
-cut -d: -f1,5 /etc/passwd > user_names_and_descriptions.txt
+# Check if users_info.txt exists, and delete it if it does
+if [ -f "users_info.txt" ]; then
+    echo "File 'users_info.txt' already exists. Deleting..."
+    rm users_info.txt
+fi
 
-# Mostrar el archivo generado
-echo "Archivo user_names_and_descriptions.txt creado con éxito:"
-echo "CONTENIDO:"
-cat user_names_and_descriptions.txt
+# Extract user names and descriptions from the /etc/passwd file and save it to users_info.txt
+cut -d: -f1,5 /etc/passwd > users_info.txt
+
+# Show the generated file
+echo "File 'users_info.txt' created successfully:"
+echo "Saved in this directory"
