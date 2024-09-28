@@ -9,7 +9,8 @@ show_menu() {
     echo " 1. Hello World                       (point_1.sh)"
     echo " 2. Number of lines in /etc/profile   (point_2.sh)"
     echo " 3. Search word in a file             (point_3.sh)"
-    echo " 4. Exit"
+    echo " u. Create users                      (users.sh)"
+    echo " 0. Exit"
     echo "--------------------------------------------------"
 }
 
@@ -48,13 +49,17 @@ while true; do
             echo "Running point_3.sh with parameters '$word' and '$path'..."
             run_script "point_3.sh" "$word" "$path"
             ;;
-        4)
+        u)
+            echo "Running users.sh..."
+            run_script "users.sh"
+            ;;
+        0)
             echo "Exiting the program."
             break
             ;;
         *)
             clear
-	    echo "Invalid option. Please try again."
-	    ;;
+            echo "Invalid option. Please try again."
+            ;;
     esac
 done
