@@ -31,20 +31,18 @@ BACKTITLE="NetBSD Script Menu"
 TITLE="Main Menu"
 MENU="Choose one of the following options:"
 
-OPTIONS=(
-1 "Execute Script 1 (point_1.sh)"
-2 "Execute Script 2 (point_2.sh)"
-3 "Execute Script 3 (point_3.sh)"
-4 "Exit"
-)
+# Since sh does not support arrays, use a single string for the options
+OPTIONS="1 Execute Script 1 (point_1.sh)
+         2 Execute Script 2 (point_2.sh)
+         3 Execute Script 3 (point_3.sh)
+         4 Exit"
 
 # Display the menu using dialog
-CHOICE=$(dialog --clear \
+CHOICE=$(echo "$OPTIONS" | xargs dialog --clear \
                 --backtitle "$BACKTITLE" \
                 --title "$TITLE" \
                 --menu "$MENU" \
                 $HEIGHT $WIDTH $CHOICE_HEIGHT \
-                "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
 
 clear
