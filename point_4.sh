@@ -5,7 +5,7 @@ clear
 
 # Title
 echo "Running script for viewing users and descriptions (point_4.sh)..."
-sleep 2
+sleep 1
 
 # Check if users_info.txt exists, and delete it if it does
 if [ -f "users_info.txt" ]; then
