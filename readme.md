@@ -22,7 +22,6 @@ This repository contains a series of shell scripts for automating common tasks o
   ```
 - Prints the search results (lines where the word appears).
 
-
 **[4. point_4_users.sh](./point_4_users.sh):** 
 - **Usernames**: The script automatically generates usernames (`user1`, `user2`, `user3`, `user4`, and `user5`).
 - **Descriptions**: Each user is assigned a description, such as "User number 1", "User number 2", etc.
@@ -37,9 +36,25 @@ This repository contains a series of shell scripts for automating common tasks o
 
 ## Example:
 
-When executed, the script will produce the following output for each user:
 
-```plaintext
-Successfully created user1 with description: User number 1
-Successfully created user2 with description: User number 2
-...
+ 
+**[6. point_6.sh](./point_6.sh): (Menu Script):**
+This shell script provides a menu that allows the user to execute other scripts (`point_1.sh`, `point_2.sh`, `point_3.sh`) and includes an option to exit the program.
+
+#### Features:
+- Displays a menu with options to select and run other scripts.
+- Automatically checks and grants execution permissions to the selected script before running it.
+- Allows for repeated executions of the selected scripts without restarting the program.
+- Includes an "Exit" option to terminate the script.
+
+#### Menu Options:
+- **Option 1:** Runs `point_1.sh` (clears the terminal and prints "Hello World from Shell").
+- **Option 2:** Runs `point_2.sh` (clears the terminal and prints the number of lines in `/etc/profile`).
+- **Option 3:** Runs `point_3.sh` (searches for a user-specified word in a user-specified file).
+- **Option 4:** Exits the menu and terminates the program.
+
+#### Usage:
+To run the menu script, simply execute:
+
+```bash
+./point_6.sh
