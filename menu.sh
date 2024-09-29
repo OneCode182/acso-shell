@@ -10,7 +10,7 @@ show_menu() {
     echo "  2. Number of lines in /etc/profile   (point_2.sh)"
     echo "  3. Search word in a file             (point_3.sh)"
     echo "  4. Search Users and info             (point_4.sh)"
-    echo "  7a. Check file or directory           (point_7a.sh)"
+    echo "  7a. Check file or directory          (point_7a.sh)"
     echo "  7b. Check failed root logins         (point_7b.sh)"
     echo "  u. Create users                      (users.sh)"
     echo "  0. Exit"
