@@ -6,12 +6,14 @@ show_menu() {
     echo "--------------------------------------------------"
     echo "      Shell Scripts Menu - Choose an option:"
     echo "--------------------------------------------------"
-    echo " 1. Hello World                       (point_1.sh)"
-    echo " 2. Number of lines in /etc/profile   (point_2.sh)"
-    echo " 3. Search word in a file             (point_3.sh)"
-    echo " 4. Search Users and info             (point_4.sh)"
-    echo " u. Create users                      (users.sh)"
-    echo " 0. Exit"
+    echo "  1. Hello World                       (point_1.sh)"
+    echo "  2. Number of lines in /etc/profile   (point_2.sh)"
+    echo "  3. Search word in a file             (point_3.sh)"
+    echo "  4. Search Users and info             (point_4.sh)"
+    echo " 7a. Check file or directory           (point_7a.sh)"
+    echo "  u. Create users                      (users.sh)"
+
+    echo "  0. Exit"
     echo "--------------------------------------------------"
 }
 
@@ -55,6 +57,18 @@ while true; do
 
         4)
             run_script "point_4.sh"
+            ;;
+
+
+
+        7a)
+            # Prompt the user for the name and directory
+            read -p "Enter the name of the item: " name
+            read -p "Enter the directory to search in: " directory
+            
+            # Run the new check_item.sh script with the parameters
+            echo "Running check_item.sh with parameters '$name' and '$directory'..."
+            run_script "point_7a.sh" "$name" "$directory"
             ;;
 
         u)
