@@ -66,26 +66,26 @@ Displays the date, time, and total number of failed login attempts for the root 
 
 
 ## Commands
-- **Crear un archivo**: `touch <nombre_archivo>`. Ejemplo:
+- **Create a file**: `touch <file_name>`. Example:
 
   ```bash
-  touch archivo.py
+  touch file.py
   ```
 
-- **Borrar un archivo**: `rm <nombre_archivo>`. Ejemplo: 
+- **Delete a file:** `rm <file_name>`. Ejemplo: 
 
   ```bash
-  rm archivo.txt
+  rm file.txt
   ```
 
-- **Dar permisos a un archivo Shell**: `chmod +x <nombre_archivo>`. Ejemplo:
+- **Give execution permissions to a Shell script::** `chmod +x <file_name>`. Ejemplo:
 
   ```bash
-  chmod +x archivo.sh
+  chmod +x script.sh
   ```
 
-- **Ejecutar un archivo Shell**: `./<nombre_archivo>`. Ejemplo:
+- **Run a Shell script:** `./<file_name>`. Ejemplo:
 
   ```bash
-  ./archivo.sh
+  ./script.sh
   ```
