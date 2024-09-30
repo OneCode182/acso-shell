@@ -4,7 +4,7 @@
 # Function to display the menu options
 show_menu() {
     echo "-----------------------------------------------------"
-    echo "      Shell Scripts Menu - Choose an option:"
+    echo "        Shell Scripts Menu - Choose an option:"
     echo "-----------------------------------------------------"
     echo "  1.  Hello World                       (point_1.sh)"
     echo "  2.  Number of lines in /etc/profile   (point_2.sh)"

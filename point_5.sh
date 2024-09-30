@@ -20,7 +20,7 @@ fi
 
 # List files in the directory and filter by permissions
 echo "Listing files in '$directory' with permissions '$permissions':"
-ls -l "$directory" | awk -v perm="$permissions" '$1 == perm {print $0}'
+ls -l "$directory" | awk -v perm="$permissions" '$1 == perm {print $0}' | more
 
 # Check if no files were found
 if [ $? -ne 0 ]; then
