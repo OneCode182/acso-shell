@@ -18,9 +18,9 @@ if [ ! -d "$directory" ]; then
   exit 1
 fi
 
-# Find and list files that match the specified permissions
+# List files in the directory and filter by permissions
 echo "Listing files in '$directory' with permissions '$permissions':"
-find "$directory" -type f -perm -$(echo "$permissions" | sed 's/[-]//g') -exec ls -l {} + | grep "$permissions"
+ls -l "$directory" | awk -v perm="$permissions" '$1 == perm {print $0}'
 
 # Check if no files were found
 if [ $? -ne 0 ]; then
