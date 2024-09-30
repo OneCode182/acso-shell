@@ -18,7 +18,7 @@ if [ ! -d "$directory" ]; then
   exit 1
 fi
 
-# List and count files with the specified permissions
+# Count files with the specified permissions
 count_matching_files=$(ls -l "$directory" | awk -v perm="$permissions" '$1 == perm {print $0}' | wc -l)
 
 # Count total number of files in the directory (excluding directories)
@@ -31,4 +31,15 @@ echo "Number of files with permissions '$permissions': $count_matching_files"
 # Check if no files were found with the specified permissions
 if [ "$count_matching_files" -eq 0 ]; then
   echo "No files with the specified permissions were found."
+else
+  # Ask the user if they want to list the files with the specified permissions
+  read -p "Do you want to list the files with permissions '$permissions'? (y/n): " choice
+
+  if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
+    # List files in the directory and filter by permissions
+    echo "Listing files in '$directory' with permissions '$permissions':"
+    ls -l "$directory" | awk -v perm="$permissions" '$1 == perm {print $0}' | more
+  else
+    echo "No files listed."
+  fi
 fi
