@@ -56,12 +56,12 @@ Displays the date, time, and total number of failed login attempts for the root 
 1. If the script does not have execution permissions, grant them using `chmod`:
 
    ```bash
-   chmod +x menu_script.sh
+   chmod +x menu.sh
    ```
 1. Run the menu script:
 
    ```bash
-   ./menu_script.sh
+   ./menu.sh
 
 
 
