@@ -3,18 +3,19 @@
 
 # Function to display the menu options
 show_menu() {
-    echo "--------------------------------------------------"
+    echo "-----------------------------------------------------"
     echo "      Shell Scripts Menu - Choose an option:"
-    echo "--------------------------------------------------"
-    echo "  1. Hello World                      (point_1.sh)"
-    echo "  2. Number of lines in /etc/profil   (point_2.sh)"
-    echo "  3. Search word in a file            (point_3.sh)"
-    echo "  4b. Users info                      (point_4.sh)"
-    echo "  7a. Check file or directory         (point_7a.sh)"
-    echo "  7b. Check failed root logins        (point_7b.sh)"
-    echo "  4a. Create users                    (users.sh)"
-    echo "  0. Exit"
-    echo "--------------------------------------------------"
+    echo "-----------------------------------------------------"
+    echo "  1.  Hello World                       (point_1.sh)"
+    echo "  2.  Number of lines in /etc/profile   (point_2.sh)"
+    echo "  3.  Search word in file               (point_3.sh)"
+    echo "  4a. Create users                      (users.sh)"
+    echo "  4b. Users info                        (point_4.sh)"
+    echo "  5.  List files with permissions       (point_5.sh)"
+    echo "  7a. Check file or directory           (point_7a.sh)"
+    echo "  7b. Check failed root logins          (point_7b.sh)"
+    echo "  0.  Exit"
+    echo "-----------------------------------------------------"
 }
 
 # Function to give execution permission if needed and run the script
@@ -55,8 +56,25 @@ while true; do
             run_script "point_3.sh" "$word" "$path"
             ;;
 
-        4)
+        4a)
+            echo "Running Users Script 4a (users.sh)..."
+            run_script "users.sh"
+            ;;
+
+
+        4b)
+            echo "Running Users Info 4b (point_4.sh)..."
             run_script "point_4.sh"
+            ;;
+
+        5)
+            # Prompt the user for the directory and permissions
+            read -p "Enter the directory to search in: " directory
+            read -p "Enter the permissions to search for (e.g., -rw-r--r--): " permissions
+            
+            # Run point_5.sh with the parameters
+            echo "Running point_5.sh with parameters '$directory' and '$permissions'..."
+            run_script "point_5.sh" "$directory" "$permissions"
             ;;
 
         7a)
@@ -74,10 +92,6 @@ while true; do
             run_script "point_7b.sh"
             ;;
 
-        u)
-            echo "Running users.sh..."
-            run_script "users.sh"
-            ;;
 
         0)
             echo "Exiting the program."
