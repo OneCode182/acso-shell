@@ -32,6 +32,15 @@ The main feature of this repository is a menu-driven shell script that simplifie
   Extracts usernames and their descriptions from the `/etc/passwd` file and saves them into `users_info.txt`.
 
 
+- **[5. Directory permissions](./point_5.sh):** 
+This script lists all files in a directory specified by the user that match the permissions provided by the user.
+  
+  - Usage: `./point_5.sh <directory> <permissions>`
+  - Example: `./point_5.sh /etc/ -rw-r--r--`
+
+
+
+
 - **[7a. Check File or Directory](./point_7a.sh):** 
 Verifies if a specified item in a directory is a file, directory, or something else.
 
@@ -53,3 +62,30 @@ Displays the date, time, and total number of failed login attempts for the root 
 
    ```bash
    ./menu_script.sh
+
+
+
+## Commands
+- **Crear un archivo**: `touch <nombre_archivo>`. Ejemplo:
+
+  ```bash
+  touch archivo.py
+  ```
+
+- **Borrar un archivo**: `rm <nombre_archivo>`. Ejemplo: 
+
+  ```bash
+  rm archivo.txt
+  ```
+
+- **Dar permisos a un archivo Shell**: `chmod +x <nombre_archivo>`. Ejemplo:
+
+  ```bash
+  chmod +x archivo.sh
+  ```
+
+- **Ejecutar un archivo Shell**: `./<nombre_archivo>`. Ejemplo:
+
+  ```bash
+  ./archivo.sh
+  ```
