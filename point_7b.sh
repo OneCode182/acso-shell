@@ -12,7 +12,7 @@ fi
 
 # Search for failed login attempts for root in the log file
 echo "Checking for failed login attempts for user root..."
-failed_attempts=$(grep "FAILED LOGIN" "$LOG_FILE" | grep "root")
+failed_attempts=$(grep "LOGIN FAILURE" "$LOG_FILE" | grep "root")
 
 # Check if there are any failed attempts
 if [ -z "$failed_attempts" ]; then
