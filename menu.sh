@@ -89,7 +89,7 @@ while true; do
 
         7b)
             echo "Running point_7b.sh to check failed root logins..."
-            run_script "point_7b.sh"
+            run_script "point_7b-2.sh"
             ;;
 
 
