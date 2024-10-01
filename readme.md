@@ -56,12 +56,12 @@ Displays the date, time, and total number of failed login attempts for the root 
 1. If the script does not have execution permissions, grant them using `chmod`:
 
    ```bash
-   chmod +x menu_script.sh
+   chmod +x menu.sh
    ```
 1. Run the menu script:
 
    ```bash
-   ./menu_script.sh
+   ./menu.sh
 
 
 
@@ -72,19 +72,19 @@ Displays the date, time, and total number of failed login attempts for the root 
   touch file.py
   ```
 
-- **Delete a file:** `rm <file_name>`. Ejemplo: 
+- **Delete a file:** `rm <file_name>`. Example: 
 
   ```bash
   rm file.txt
   ```
 
-- **Give execution permissions to a Shell script::** `chmod +x <file_name>`. Ejemplo:
+- **Give execution permissions to a Shell script::** `chmod +x <file_name>`. Example:
 
   ```bash
   chmod +x script.sh
   ```
 
-- **Run a Shell script:** `./<file_name>`. Ejemplo:
+- **Run a Shell script:** `./<file_name>`. Example:
 
   ```bash
   ./script.sh
