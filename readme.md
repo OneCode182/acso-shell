@@ -60,9 +60,9 @@ Displays the date, time, and total number of failed login attempts for the root 
    ```
 1. Run the menu script:
 
-   ```bash
-   ./menu.sh
-
+  ```bash
+  ./menu.sh
+  ```
 
 
 ## Commands
