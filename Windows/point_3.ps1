@@ -1,3 +1,6 @@
+# TESTS
+# .\point_3.ps1 Driver C:\Windows\inf\xusb22.inf
+
 # Clear the screen
 Clear-Host
 

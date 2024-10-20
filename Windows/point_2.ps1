@@ -2,13 +2,21 @@
 Clear-Host
 
 # Print the number of lines in the specified directory
-$profilePath = "C:\Windows\win.ini" 
+$profilePath = "C:\Windows\System32\drivers\etc\hosts" 
 
 # Check if the file exists
 if (Test-Path $profilePath) {
-    # Get the number of lines in the file
-    $lineCount = Get-Content $profilePath | Measure-Object -Line
-    Write-Host "The number of lines in the file '$($profilePath)' is: $($lineCount.Lines)"
+    # Get all the lines in the file
+    $lines = Get-Content $profilePath
+    
+    # Count total lines, including empty lines
+    $totalLines = $lines.Count
+
+
+    # Print results
+    Write-Host "In the file '$($profilePath)',"
+    Write-Host "the total number of lines is: $totalLines"
+
 } else {
     Write-Host "File not found: $profilePath"
 }
